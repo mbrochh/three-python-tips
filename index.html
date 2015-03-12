@@ -85,6 +85,51 @@ deactivate
 				    </section>
 				</section>
 
+				<section>
+				    <section>
+                        <h2>Tip #2: Use virtualenvwrapper</h2>
+                        <p>Virtualenv alone is nice.</p>
+                        <p>Combined with virtualenvwrapper, it is awesome.</p>
+				    </section>
+					<section>
+                        <h2>Tell me why?!</h2>
+                        <ul>
+                            <li>Have all your virtual environments in one folder</li>
+                            <li>Activate them from anywhere in your terminal</li>
+                            <li>Support for auto-complete of environment names</li>
+                        </ul>
+				    </section>
+					<section>
+                        <h2>Tell me how!!</h2>
+					    <pre><code data-trim contenteditable>
+# In terminal:
+pip install virtualenvrapper
+					    </pre></code>
+					    <pre><code data-trim contenteditable>
+# In .bash_profile
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export WORKON_HOME=$HOME/.virtualenvs
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+source /usr/local/bin/virtualenvwrapper.sh
+				        </code></pre>
+					    <pre><code data-trim contenteditable>
+# In terminal:
+source ~/.bash_profile
+mkvirtualenv myproject
+workon myproject
+deactivate
+					    </pre></code>
+				    </section>
+					<section>
+                        <h2>Tell me more!</h2>
+                        <ul>
+                            <li>Puts all virtual environments in `~/.virtualenvs`</li>
+                            <li>See installed packages at <pre><code>~/.virtualenvs/myproject/libs/python2.7/site-packages/</code></pre></li>
+                        </ul>
+				    </section>
+				</section>
+
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
